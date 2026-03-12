@@ -1,0 +1,42 @@
+{
+  "name": "datasentinel-server",
+  "version": "1.0.0",
+  "description": "Data Leakage Detection & Compliance Monitoring System - Backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npx nodemon server.js",
+    "test": "jest --detectOpenHandles"
+  },
+  "keywords": [
+    "data-leakage",
+    "compliance",
+    "monitoring",
+    "security"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "csv-stringify": "^6.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "mammoth": "^1.6.0",
+    "mongoose": "^6.12.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^8.0.2",
+    "pdf-parse": "^1.1.1",
+    "pdfkit": "^0.13.0",
+    "python-shell": "^5.0.0",
+    "socket.io": "^4.7.2",
+    "tesseract.js": "^5.0.4",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  }
+}

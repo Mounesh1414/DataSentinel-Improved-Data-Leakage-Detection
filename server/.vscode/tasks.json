@@ -1,0 +1,39 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Verify qs module",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"-e",
+				"require('qs'); console.log('qs ok')"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Find empty package manifests",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-ChildItem -Path node_modules -Recurse -Filter package.json | Where-Object { $_.Length -eq 0 } | Select-Object -ExpandProperty FullName"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Verify qs module 2",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"-e",
+				"require('qs'); console.log('qs ok')"
+			],
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}
